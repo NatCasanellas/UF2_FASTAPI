@@ -3,7 +3,7 @@
 ## GET Swagger
 ![captura swagger](images/captura%20Swagger.png)
 **afegir comentari**
-**text cursiva**
+
 
 
 ## GET Postman
