@@ -1,27 +1,13 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from fastapi import FastAPI, HTTPException
+
 
 app = FastAPI()
 
-#funcio GET que retorna un missatge
-@app.get("/")
-async def root():
-    return {"message": "Hello World!!"}
+data = {"1": "Item 1", "2": "Item 2"}
 
 
-#model POST
-class Item(BaseModel):
-    name: str
-    description: str
-    price: float
-    tax: float
-    category: str
-    in_stock: bool
-
-app = FastAPI()
-
-
-#funcio POST
-@app.post("/items/")
-async def create_item(item: Item):
-    return {"item": item}
+@app.get("/items/{item_id}")
+async def read_item(item_id: str):
+    if item_id not in data:
+        raise HTTPException(status_code = 404, detail="Item not found")
+    return {"item_id": item_id, "name": data[item_id]}
