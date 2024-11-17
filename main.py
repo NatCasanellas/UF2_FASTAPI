@@ -1,12 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI()
-
-#funcio GET que retorna un missatge
-@app.get("/")
-async def root():
-    return {"message": "Hello World!!"}
 
 
 #model POST
@@ -14,7 +8,7 @@ class Item(BaseModel):
     name: str
     description: str
     price: float
-    tax: float
+    tax: float =None
     category: str
     in_stock: bool
 
