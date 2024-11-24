@@ -1,12 +1,11 @@
-## Proves amb Postman
 
-### Body-Fields
+## Body-Fields
+### Proves amb Postman
+
 ![captura postman](images/Captura%20Postman.png)
 
-**afegir comentari**
+**Els Body-Fields permeten personalitzar els camps d'un model afegint metadates i validacions**
 
-
-## Proves Swagger
-
-### Body-Nested Models
-![captura swagger]()
+## Body-Nested Models
+### Proves Swagger
+![captura swagger](images/Captura%20%20Swagger.png)
